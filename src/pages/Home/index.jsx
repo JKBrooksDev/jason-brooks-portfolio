@@ -1,6 +1,7 @@
 import "./style.css";
 import { introdata } from "../../data/content";
 import { ReactTyped } from "react-typed";
+import { Link } from "react-router-dom";
 
 
 export default function Home() {
@@ -25,9 +26,9 @@ export default function Home() {
 
         <p>{introdata.description}</p>
 
-        <a href="/portfolio" className="cta-btn">
+        <Link href="/portfolio" className="cta-btn">
           View My Work
-        </a>
+        </Link>
       </div>
 
       <div className="home-image">
