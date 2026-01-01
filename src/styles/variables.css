@@ -1,0 +1,27 @@
+:root {
+  /* Light theme */
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --primary-color: #4a90e2;
+  --secondary-color: #222222;
+
+  /* FIXED: use a light translucent overlay */
+  --overlay-color: rgba(0, 0, 0, 0.08);
+
+  --font-main: 'Inter', sans-serif;
+  --transition-fast: 0.2s ease;
+  --transition-slow: 0.4s ease;
+  --cta-hover: #3a7bd5;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg-color: #0d0d0d;
+  --text-color: #f5f5f5;
+  --primary-color: #4a90e2;
+  --secondary-color: #e0e0e0;
+  --cta-hover: #6aa8ff;
+
+  /* Dark translucent overlay */
+  --overlay-color: rgba(255, 255, 255, 0.15);
+}

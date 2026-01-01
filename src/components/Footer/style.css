@@ -1,0 +1,40 @@
+.footer {
+  margin-top: 4rem;
+  padding: 2.5rem 0;
+  background: var(--overlay-color);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+}
+
+[data-theme="dark"] .footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-icons a {
+  font-size: 1.9rem;
+  color: var(--text-color);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.footer-icons a:hover {
+  transform: translateY(-3px);
+  color: var(--primary-color);
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}

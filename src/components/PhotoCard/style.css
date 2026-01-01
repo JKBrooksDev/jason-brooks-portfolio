@@ -1,0 +1,110 @@
+.photo-card {
+  background: var(--overlay-color);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.1);
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.photo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.photo-info {
+  padding: 1.2rem;
+}
+
+.photo-info p {
+  margin-bottom: 0.8rem;
+  color: var(--text-color);
+  opacity: 0.9;
+  font-size: 1.05rem;
+}
+
+.photo-info a {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.photo-info a:hover {
+  background: var(--cta-hover);
+  transform: translateY(-3px);
+}
+
+.photo-btn {
+  padding: 0.5rem 1rem;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.photo-btn:hover {
+  background: var(--cta-hover);
+  transform: translateY(-3px);
+}
+
+/* Container that allows panning */
+.zoom-container {
+  overflow: hidden;
+  touch-action: pinch-zoom; /* ⭐ enables pinch zoom on mobile */
+  position: relative;
+  max-height: 80vh;
+}
+
+/* The image itself */
+.zoom-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s ease;
+  cursor: grab;
+}
+
+/* When zoomed, allow dragging */
+.zoom-image:active {
+  cursor: grabbing;
+}
+/* ⭐ Zoom + Pan Container */
+.zoom-container {
+  overflow: hidden;
+  touch-action: none; /* allows pinch + drag */
+  position: relative;
+  max-height: 80vh;
+  width: 100%;
+}
+
+/* ⭐ Zoomable Image */
+.zoom-image {
+  width: 100%;
+  height: auto;
+  cursor: grab;
+  user-select: none; /* prevents blocked cursor */
+  transition: transform 0.1s ease-out;
+}
+
+.zoom-image:active {
+  cursor: grabbing;
+}
