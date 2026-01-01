@@ -1,3 +1,6 @@
+/* ============================
+   HOME SECTION LAYOUT
+============================ */
 .home {
   display: flex;
   align-items: center;
@@ -6,8 +9,12 @@
   padding: 5rem 0;
 }
 
-/* ⭐ HERO FADE-IN ANIMATION */
-.hero-fade {
+/* ============================
+   HERO FADE-IN ANIMATION FIX
+   (Animation moved to children)
+============================ */
+.home-text,
+.home-image img {
   opacity: 0;
   transform: translateY(20px);
   animation: heroFadeIn 1s ease-out forwards;
@@ -20,6 +27,9 @@
   }
 }
 
+/* ============================
+   TEXT CONTENT
+============================ */
 .home-text {
   flex: 1;
 }
@@ -43,6 +53,9 @@
   opacity: 0.9;
 }
 
+/* ============================
+   CALL-TO-ACTION BUTTON
+============================ */
 .cta-btn {
   display: inline-block;
   padding: 0.9rem 1.8rem;
@@ -58,29 +71,30 @@
   transform: translateY(-3px);
 }
 
+/* ============================
+   HERO IMAGE
+============================ */
 .home-image {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
-/* ⭐ Optional: Fade-in delay for hero image */
 .home-image img {
   width: 85%;
   border-radius: 14px;
   object-fit: cover;
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
   transition: transform var(--transition-slow);
-  animation: heroFadeIn 1.2s ease-out forwards;
-  opacity: 0;
-  transform: translateY(20px);
 }
 
 .home-image img:hover {
   transform: scale(1.03);
 }
 
-/* Mobile */
+/* ============================
+   MOBILE RESPONSIVE
+============================ */
 @media (max-width: 768px) {
   .home {
     flex-direction: column-reverse;
