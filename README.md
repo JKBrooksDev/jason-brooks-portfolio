@@ -1,16 +1,96 @@
-# React + Vite
+# Jason Brooks – Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal developer portfolio. This site showcases my work as a Full Stack Web Developer, including featured projects, photography, and a bit about who I am and what I enjoy building.
 
-Currently, two official plugins are available:
+This portfolio was built with a focus on clean UI, smooth UX, and responsive design across all devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Live Site
+**https://YOUR-VERCEL-URL-HERE**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+(Replace this with your deployed link once live.)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧰 Tech Stack
+
+### **Frontend**
+- React (Vite)
+- JavaScript (ES6+)
+- CSS3 with custom variables
+- Responsive design & mobile-first layout
+
+### **Other Tools**
+- React Router
+- AOS (Animate On Scroll)
+- Custom modal + zoom/pan image viewer
+- Git & GitHub
+- Vercel (deployment)
+
+---
+
+## 📸 Features
+
+### **✔ Modern, Responsive UI**
+Fully responsive layout with a custom-built mobile navigation menu and smooth animations.
+
+### **✔ Interactive Photo Gallery**
+- Modal image viewer  
+- Scroll‑wheel zoom (desktop)  
+- Pinch‑to‑zoom (mobile)  
+- Click‑and‑drag panning  
+- Smooth transitions  
+
+### **✔ Project Portfolio**
+Showcases my full-stack and frontend work, including:
+- Capstone Ecommerce App  
+- Restored legacy projects  
+- JavaScript tools and UI components  
+
+### **✔ About Page**
+A clean, personal introduction to who I am, what I enjoy building, and what motivates me as a developer.
+
+### **✔ Contact Page**
+Simple and accessible way to reach me for opportunities or collaboration.
+
+---
+
+## 📂 Project Structure
+
+src/
+assets/
+components/
+data/
+pages/
+styles/
+App.jsx
+main.jsx
+
+
+---
+
+## 🧑‍💻 About Me
+
+I’m a Full Stack Web Developer with a background in construction, production, and hands‑on problem solving. I enjoy building clean, functional interfaces and full‑stack applications that feel intuitive and polished.
+
+I’m currently focused on:
+- React development  
+- Full‑stack MERN applications  
+- UI/UX improvements  
+- Building real-world, production-ready features  
+
+---
+
+## 📬 Contact
+
+If you'd like to connect, collaborate, or discuss opportunities:
+
+**Email:** your-email-here  
+**LinkedIn:** https://linkedin.com/in/YOUR-LINK  
+**GitHub:** https://github.com/JKBrooksDev
+
+---
+
+## 📄 License
+This project is open source and available under the MIT License.
