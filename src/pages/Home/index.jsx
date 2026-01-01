@@ -26,7 +26,7 @@ export default function Home() {
 
         <p>{introdata.description}</p>
 
-        <Link href="/portfolio" className="cta-btn">
+        <Link to="/portfolio" className="cta-btn">
           View My Work
         </Link>
       </div>
