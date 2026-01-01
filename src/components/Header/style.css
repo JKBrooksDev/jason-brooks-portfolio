@@ -2,7 +2,7 @@
   width: 100%;
   background: var(--bg-color);
   border-bottom: 1px solid rgba(0,0,0,0.1);
-  margin-bottom: 2rem;
+  margin-bottom: 0; /* FIXED */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -11,6 +11,7 @@
   transition: box-shadow var(--transition-fast), background var(--transition-fast);
   overflow-x: hidden;
 }
+
 
 .header.scrolled {
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
