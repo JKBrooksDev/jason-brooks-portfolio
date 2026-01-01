@@ -7,9 +7,8 @@ This portfolio was built with a focus on clean UI, smooth UX, and responsive des
 ---
 
 ## 🚀 Live Site
-**https://YOUR-VERCEL-URL-HERE**
+**https://jason-brooks-portfolio.vercel.app**
 
-(Replace this with your deployed link once live.)
 
 ---
 
