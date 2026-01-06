@@ -16,7 +16,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/jason-kenneth-brooks-32222539b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2BJotxE4%2FT9CqgngKB4nDNg%3D%3D"
+            href="https://www.linkedin.com/in/jason-kenneth-brooks-32222539b/"
             target="_blank"
             rel="noopener noreferrer"
           >
