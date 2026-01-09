@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import headshot from "../../assets/jason.jpg";
 import resumePDF from "../../assets/JasonBrooksResume.pdf";
-import vcardFile from "../../assets/JasonBrooks.vcf";
 
 export default function Contact() {
 
@@ -108,7 +107,7 @@ export default function Contact() {
           <p className="qr-title">Scan to Save Contact</p>
           <div id="qrcode"></div>
 
-          <a href={vcardFile} className="save-btn" download>
+          <a href="/JasonBrooks.vcf" className="save-btn" download>
             Download Contact
           </a>
 
