@@ -5,6 +5,39 @@ import resumePDF from "../../assets/JasonBrooksResume.pdf";
 
 export default function Contact() {
 
+  // -------------------------------
+  // JavaScript vCard Generator
+  // -------------------------------
+  function downloadVCard() {
+    const vcard = `
+BEGIN:VCARD
+VERSION:3.0
+FN:Jason Brooks
+TITLE:Fullstack Developer
+TEL;TYPE=CELL:8653523318
+EMAIL:jasonbrooks1127@gmail.com
+URL:https://jason-brooks-portfolio.vercel.app
+item1.URL:https://linkedin.com/in/jason-brooks-32222539b
+item1.X-ABLabel:LinkedIn
+item2.URL:https://github.com/JKBrooksDev
+item2.X-ABLabel:GitHub
+END:VCARD
+    `.trim();
+
+    const blob = new Blob([vcard], { type: "text/vcard" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "JasonBrooks.vcf";
+    a.click();
+
+    URL.revokeObjectURL(url);
+  }
+
+  // -------------------------------
+  // QR Code Generator
+  // -------------------------------
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js";
@@ -12,9 +45,8 @@ export default function Contact() {
     document.body.appendChild(script);
 
     function generateQR() {
-      // QR now points to your API endpoint (opens Contacts instantly)
       new window.QRCode(document.getElementById("qrcode"), {
-        text: "https://jason-brooks-portfolio.vercel.app/api/contact",
+        text: "javascript:(" + downloadVCard.toString() + ")()",
         width: 150,
         height: 150,
         colorDark: "#0f1c2e",
@@ -108,9 +140,9 @@ export default function Contact() {
           <p className="qr-title">Scan to Add Contact</p>
           <div id="qrcode"></div>
 
-          <a href="/api/contact" className="save-btn">
+          <button className="save-btn" onClick={downloadVCard}>
             Add to Contacts
-          </a>
+          </button>
 
           <a href={resumePDF} className="resume-btn" download>
             Download Resume
