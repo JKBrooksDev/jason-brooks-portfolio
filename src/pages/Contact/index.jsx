@@ -6,7 +6,7 @@ import "./style.css";
 export default function Contact() {
 
   useEffect(() => {
-    
+
     const script = document.createElement("script");
     script.src = "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js";
     script.onload = generateQR;
@@ -15,7 +15,7 @@ export default function Contact() {
     function generateQR() {
       // QR now points to your vCard file (phones open it instantly)
       new window.QRCode(document.getElementById("qrcode"), {
-        text: window.location.origin + "/JasonBrooks.vcf",
+        text: "https://jason-brooks-portfolio.vercel.app/JasonBrooks.vcf",
         width: 150,
         height: 150,
         colorDark: "#0f1c2e",
