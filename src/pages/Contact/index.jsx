@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import headshot from "../../assets/jason.jpg";
 import resumePDF from "../../assets/JasonBrooksResume.pdf";
+import "./style.css";
 
 export default function Contact() {
 
