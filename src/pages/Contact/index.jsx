@@ -1,7 +1,7 @@
 import "./style.css";
 import { useEffect } from "react";
 import myLogo from "../../assets/myLogo.png";
-import headshot from "../../assets/jason.jpg";
+import headshot from "../../assets/profile_pic.jpg";
 import resumePDF from "../../assets/JasonBrooksResume.pdf";
 
 export default function Contact() {
