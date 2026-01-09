@@ -5,24 +5,24 @@ import resumePDF from "../../assets/JasonBrooksResume.pdf";
 
 export default function Contact() {
 
-  // -------------------------------
-  // JavaScript vCard Generator
-  // -------------------------------
+  // ---------------------------------------------------
+  // JavaScript vCard Generator (iPhone + Android safe)
+  // ---------------------------------------------------
   function downloadVCard() {
-    const vcard = `
-BEGIN:VCARD
-VERSION:3.0
-FN:Jason Brooks
-TITLE:Fullstack Developer
-TEL;TYPE=CELL:8653523318
-EMAIL:jasonbrooks1127@gmail.com
-URL:https://jason-brooks-portfolio.vercel.app
-item1.URL:https://linkedin.com/in/jason-brooks-32222539b
-item1.X-ABLabel:LinkedIn
-item2.URL:https://github.com/JKBrooksDev
-item2.X-ABLabel:GitHub
-END:VCARD
-    `.trim();
+    const vcard =
+      "BEGIN:VCARD\r\n" +
+      "VERSION:3.0\r\n" +
+      "FN:Jason Brooks\r\n" +
+      "N:Brooks;Jason;;;\r\n" +
+      "TITLE:Fullstack Developer\r\n" +
+      "TEL;TYPE=CELL:8653523318\r\n" +
+      "EMAIL:jasonbrooks1127@gmail.com\r\n" +
+      "URL:https://jason-brooks-portfolio.vercel.app\r\n" +
+      "item1.URL:https://linkedin.com/in/jason-brooks-32222539b\r\n" +
+      "item1.X-ABLabel:LinkedIn\r\n" +
+      "item2.URL:https://github.com/JKBrooksDev\r\n" +
+      "item2.X-ABLabel:GitHub\r\n" +
+      "END:VCARD\r\n";
 
     const blob = new Blob([vcard], { type: "text/vcard" });
     const url = URL.createObjectURL(blob);
@@ -35,9 +35,19 @@ END:VCARD
     URL.revokeObjectURL(url);
   }
 
-  // -------------------------------
-  // QR Code Generator
-  // -------------------------------
+  // ---------------------------------------------------
+  // Auto-run vCard when QR code loads ?add=true
+  // ---------------------------------------------------
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("add") === "true") {
+      downloadVCard();
+    }
+  }, []);
+
+  // ---------------------------------------------------
+  // QR Code Generator (points to ?add=true)
+  // ---------------------------------------------------
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js";
@@ -46,7 +56,7 @@ END:VCARD
 
     function generateQR() {
       new window.QRCode(document.getElementById("qrcode"), {
-        text: "javascript:(" + downloadVCard.toString() + ")()",
+        text: window.location.origin + "/contact?add=true",
         width: 150,
         height: 150,
         colorDark: "#0f1c2e",
