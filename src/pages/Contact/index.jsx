@@ -1,21 +1,20 @@
+import "./style.css";
 import { useEffect } from "react";
 import headshot from "../../assets/jason.jpg";
 import resumePDF from "../../assets/JasonBrooksResume.pdf";
-import "./style.css";
 
 export default function Contact() {
 
   useEffect(() => {
-
     const script = document.createElement("script");
     script.src = "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js";
     script.onload = generateQR;
     document.body.appendChild(script);
 
     function generateQR() {
-      // QR now points to your vCard file (phones open it instantly)
+      // QR now points to your API endpoint (opens Contacts instantly)
       new window.QRCode(document.getElementById("qrcode"), {
-        text: "https://jason-brooks-portfolio.vercel.app/JasonBrooks.vcf",
+        text: "https://jason-brooks-portfolio.vercel.app/api/contact",
         width: 150,
         height: 150,
         colorDark: "#0f1c2e",
@@ -106,11 +105,11 @@ export default function Contact() {
 
         {/* QR + BUTTONS */}
         <div className="qr-section">
-          <p className="qr-title">Scan to Save Contact</p>
+          <p className="qr-title">Scan to Add Contact</p>
           <div id="qrcode"></div>
 
-          <a href="/JasonBrooks.vcf" className="save-btn" download>
-            Download Contact
+          <a href="/api/contact" className="save-btn">
+            Add to Contacts
           </a>
 
           <a href={resumePDF} className="resume-btn" download>
